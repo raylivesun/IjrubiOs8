@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IjrubiOs8</title>
+    </head>
+    <body>
+        <h1>IjrubiOs8</h1>
+        <div class="container">
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            <p>This is yet another paragraph.</p>
+        </div>
+        <script src="script.js">
+            // Your JavaScript code here
+
+            // Example: Toggle the visibility of paragraphs
+            document.querySelectorAll('.container p').forEach(p => {
+                p.addEventListener('click', () => {
+                    p.classList.toggle('hidden');
+                });
+            });
+            // Example: Change the background color of the container
+            document.querySelector('.container').style.backgroundColor = 'lightblue';
+            // Example: Change the font size of paragraphs
+            document.querySelectorAll('.container p').forEach(p => {
+                p.style.fontSize = '2em';
+            });
+            // Example: Add a new paragraph to the container
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph added dynamically.';
+            document.querySelector('.container').appendChild(newParagraph);
+            // Example: Remove the last paragraph from the container
+            const lastParagraph = document.querySelector('.container p:last-child');
+            document.querySelector('.container').removeChild(lastParagraph);
+            // Example: Add a button to toggle the visibility of the container
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = 'Toggle Container Visibility';
+            toggleButton.addEventListener('click', () => {
+                document.querySelector('.container').classList.toggle('hidden');
+            });
+            document.querySelector('body').appendChild(toggleButton);
+            // Example: Add a button to change the background color of the container
+            const colorButton = document.createElement('button');
+            colorButton.textContent = 'Change Background Color';
+            colorButton.addEventListener('click', () => {
+                const colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.querySelector('.container').style.backgroundColor = randomColor;
+            });
+            document.querySelector('body').appendChild(colorButton);
+            // Example: Add a button to change the font size of paragraphs
+            const fontSizeButton = document.createElement('button');
+            fontSizeButton.textContent = 'Change Font Size';
+            fontSizeButton.addEventListener('click', () => {
+                const fontSizes = ['1em', '1.5em', '2em', '2.5em', '3em'];
+                const randomFontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+                document.querySelectorAll('.container p').forEach(p => {
+                    p.style.fontSize = randomFontSize;
+                });
+            });
+            document.querySelector('body').appendChild(fontSizeButton);
+            // Example: Add a button to add a new paragraph to the container
+            const addParagraphButton = document.createElement('button');
+            addParagraphButton.textContent = 'Add New Paragraph';
+            addParagraphButton.addEventListener('click', () => {
+                const newParagraphText = prompt('Enter the new paragraph text:');
+                if (newParagraphText) {
+                    const newParagraph = document.createElement('p');
+                    newParagraph.textContent = newParagraphText;
+                    document.querySelector('.container').appendChild(newParagraph);
+                }
+            });
+            document.querySelector('body').appendChild(addParagraphButton);
+            // Example: Add a button to remove the last paragraph from the container
+            const removeLastParagraphButton = document.createElement('button');
+            removeLastParagraphButton.textContent = 'Remove Last Paragraph';
+            removeLastParagraphButton.addEventListener('click', () => {
+                const lastParagraph = document.querySelector('.container p:last-child');
+                if (lastParagraph) {
+                    document.querySelector('.container').removeChild(lastParagraph);
+                }
+            
+                });
+            document.querySelector('body').appendChild(removeLastParagraphButton);
+            // Example: Add a button to sort paragraphs by length in ascending order
+            const sortButton = document.createElement('button');
+            sortButton.textContent = 'Sort Paragraphs by Length (Ascending)';
+            sortButton.addEventListener('click', () => {
+                const paragraphs = document.querySelectorAll('.container p');
+                const sortedParagraphs = Array.from(paragraphs).sort((a, b) => a.textContent.length - b.textContent.length);
+                document.querySelector('.container').innerHTML = '';
+                sortedParagraphs.forEach(p => document.querySelector('.container').appendChild(p));
+            });
+            document.querySelector('body').appendChild(sortButton);
+            // Example: Add a button to sort paragraphs by length in descending order
+            const reverseSortButton = document.createElement('button');
+            reverseSortButton.textContent = 'Sort Paragraphs by Length (Descending)';
+            reverseSortButton.addEventListener('click', () => {
+                const paragraphs = document.querySelectorAll('.container p');
+                const sortedParagraphs = Array.from(paragraphs).sort((a, b) => b.textContent.length - a.textContent.length);
+                document.querySelector('.container').innerHTML = '';
+                sortedParagraphs.forEach(p => document.querySelector('.container').appendChild(p));
+            });
+            document.querySelector('body').appendChild(reverseSortButton);
+        </script>
+        <style>
+            /* CSS styles here */
+           .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+           }
+           .hidden {
+            display: none;
+            }
+            p {
+            margin: 10px 0;
+            }
+            /* Add your own CSS styles here */
+            /* Example: Change the background color and font color of paragraphs */
+           .container p {
+            background-color: #fff;
+            color: #000;
+            }
+            /* Example: Add a hover effect to paragraphs */
+           .container p:hover {
+            background-color: #f5f5f5;
+            }
+            /* Example: Add a transition effect to paragraphs */
+            /* Example: Add a responsive design */
+            @media (max-width: 600px) {
+           .container {
+            width: 100%;
+            }
+            }
+            /* Example: Add a button to toggle the visibility of paragraphs */
+            /* Example: Add a button to change the background color of the container */
+            /* Example: Add a button to change the font size of paragraphs */
+            /* Example: Add a button to add a new paragraph to the container */
+            /* Example: Add a button to remove the last paragraph from the container */
+            /* Example: Add a button to sort paragraphs by length in ascending order */
+            /* Example: Add a button to sort paragraphs by length in descending order */
+            /* Example: Add a button to filter paragraphs by a specific keyword */
+            /* Example: Add a button to reset the filter */
+            /* Example: Add a search bar */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their length */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their font size */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their background color */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their font color */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their font family */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their font weight */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their text decoration */
+            /* Example: Add a button to toggle the visibility of paragraphs based on their text transform */
+            /* Example: Add a button to toggle the visibility of paragraphs based
+
+            /* Example: Add a button to toggle the visibility of paragraphs based on their letter spacing */
+        </style>
+
+        <script>
+            /* JavaScript code here */
+            // Example: Filter paragraphs by a specific keyword
+            const keywordInput = document.getElementById('keyword-input');
+            const filterButton = document.getElementById('filter-button');
+            filterButton.addEventListener('click', () => {
+                const keyword = keywordInput.value.toLowerCase();
+                const paragraphs = document.querySelectorAll('.container p');
+                paragraphs.forEach(p => {
+                    const text = p.textContent.toLowerCase();
+                    if (text.includes(keyword)) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            });
+            // Example: Reset the filter
+            const resetButton = document.getElementById('reset-button');
+            resetButton.addEventListener('click', () => {
+                keywordInput.value = '';
+                const paragraphs = document.querySelectorAll('.container p');
+                paragraphs.forEach(p => p.classList.remove('hidden'));
+            });
+            // Example:
+            // Example: Add a search bar
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const paragraphs = document.querySelectorAll('.container p');
+                paragraphs.forEach(p => {
+                    const text = p.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            });
+            // Example: Toggle the visibility of paragraphs based on their length
+            const lengthToggleButton = document.getElementById('length-toggle-button');
+            lengthToggleButton.addEventListener('click', () => {
+                const paragraphs = document.querySelectorAll('.container p');
+                paragraphs.forEach(p => {
+                    const length = p.textContent.length;
+                    if (length < 10) {
+                        p.classList.remove('hidden');
+                        p.classList.add('short');
+                        p.classList.remove('medium');
+                        p.classList.remove('long');
+                        p.classList.remove('extra-long');
+                        p.classList.remove('very-extra-long');
+
+
+                    } else if (length >= 10 && length < 20) {
+                        p.classList.remove('hidden');
+                        p.classList.remove('short');
+                        p.classList.add('medium');
+                        p.classList.remove('long');
+                        p.classList.remove('extra-long');
+                        p.classList.remove('very-extra-long');
+
+                    } else if (length >= 20 && length < 30) {
+                        p.classList.remove('hidden');
+                        p.classList.remove('short');
+                        p.classList.remove('medium');
+                        p.classList.add('long');
+                        p.classList.remove('extra-long');
+                        p.classList.remove('very-extra-long');
+
+                    } else if (length >= 30 && length < 40) {
+                        p.classList.remove('hidden');
+                        p.classList.remove('short');
+                        p.classList.remove('medium');
+                        p.classList.remove('long');
+                        p.classList.add('extra-long');
+                        p.classList.remove('very-extra-long');
+
+                    } else {
+                        p.classList.remove('hidden');
+                        p.classList.remove('short');
+                        p.classList.remove('medium');
+                        p.classList.remove('long');
+                        p.classList.remove('extra-long');
+                        p.classList.add('very-extra-long');
+                    }
+                    p.classList.remove('small');
+                    p.classList.remove('medium');
+                    p.classList.remove('large');
+                    p.classList.remove('extra-large');
+                    p.classList.remove('very-extra-large');
+                    if (length < 5) {
+                        p.classList.add('small');
+                    } else if (length >= 5 && length < 10) {
+                        p.classList.add('medium');
+                    } else if (length >= 10 && length < 20) {
+                        p.classList.add('large');
+                    } else if (length >= 20 && length < 30) {
+                        p.classList.add('extra-large');
+                    } else {
+                        p.classList.add('very-extra-large');
+                    }
+                    p.classList.remove('tiny');
+                    p.classList.remove('small');
+                    p.classList.remove('medium');
+                    p.classList.remove('large');
+                    p.classList.remove('extra-large');
+                    p.classList.remove('very-extra-large');
+                    if (length < 2) {
+                        p.classList.add('tiny');
+                    } else if (length >= 2 && length < 5) {
+                        p.classList.add('small');
+                    } else if (length >= 5 && length < 10) {
+                        p.classList.add('medium');
+                    } else if (length >= 10 && length < 20) {
+                        p.classList.add('large');
+                    } else if (length >= 20 && length < 30) {
+                        p.classList.add('extra-large');
+                    } else {
+                        p.classList.add('very-extra-large');
+                    }
+                });
+                const shortParagraphs = document.querySelectorAll('.container p.short');
+                const mediumParagraphs = document.querySelectorAll('.container p.medium');
+                const longParagraphs = document.querySelectorAll('.container p.long');
+                
+                const extraLongParagraphs = document.querySelectorAll('.container p.extra-long');
+                const veryExtraLongParagraphs = document.querySelectorAll('.container p.very-extra-long');
+                const smallParagraphs = document.querySelectorAll('.container p.small');
+            });
+        </script>
+    </body>
+    </html>
+</html>
